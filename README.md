@@ -32,7 +32,7 @@ Run the delivery-response tests with `node --test tests/contact.test.mjs`. They 
 
 ## Deployment
 
-Build output is `dist/`. GitHub Pages deployment is configured in `.github/workflows/deploy.yml` and runs on pushes to `main` or manual dispatch. In the GitHub repository, select **Settings → Pages → Source → GitHub Actions** before the first deployment. The workflow derives the root or repository base path from GitHub Pages, builds with Node.js 24 and npm, and publishes only `dist/`.
+Build output is `dist/`. The optional `.github/workflows/deploy.yml` workflow is manual-only, so it does not launch a second deployment alongside the active branch publisher. If switching to it later, select **Settings → Pages → Source → GitHub Actions**, then dispatch the workflow. It derives the deployment base path from GitHub Pages, builds with Node.js 24 and npm, and publishes only `dist/`.
 
 The current public repository is `Jaseeth/portfolio`, using **main /docs** branch publishing. Build with `VITE_BASE_PATH=/portfolio/`, then synchronize the generated `dist/` files to tracked `docs/` before committing. Include `.nojekyll` and remove obsolete generated asset files when synchronizing.
 

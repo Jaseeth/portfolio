@@ -1,8 +1,8 @@
-name: Deploy portfolio to GitHub Pages
+name: Manual GitHub Actions deployment (optional)
 
 on:
-  push:
-    branches: [main]
+  # The live site publishes main /docs through GitHub Pages. Keep the custom
+  # build available manually, without launching a second deployment on pushes.
   workflow_dispatch:
 
 permissions:
