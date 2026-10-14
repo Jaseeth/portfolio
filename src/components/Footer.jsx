@@ -1,0 +1,6 @@
+import { Linkedin, Mail, ArrowUpRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { profile } from '../data/siteData'
+export default function Footer() {
+  return <footer className="site-footer"><div className="container-main"><div className="flex flex-col justify-between gap-9 md:flex-row"><div><Link className="wordmark" to="/">JASEETH<span>.</span></Link><p className="mt-4 max-w-sm text-sm leading-7 text-white/60">Full-stack development. Thoughtful interfaces.<br/>Built with care in Doha, Qatar.</p></div><nav className="flex flex-wrap items-start gap-x-6 gap-y-4 text-sm text-white/70" aria-label="Footer navigation"><Link to="/about">About</Link><Link to="/projects">Projects</Link><Link to="/experience">Experience</Link><a href={profile.resume} download className="inline-flex items-center gap-1">CV <ArrowUpRight size={14}/></a></nav><div className="flex items-start gap-3"><a className="social-link" href={profile.linkedin} target="_blank" rel="noopener noreferrer" aria-label="Jaseeth on LinkedIn"><Linkedin size={19}/></a><a className="social-link" href={`mailto:${profile.email}`} aria-label="Email Jaseeth"><Mail size={19}/></a></div></div><div className="mt-9 flex flex-wrap justify-between gap-3 border-t border-white/10 pt-6 text-xs text-white/50"><span>© {new Date().getFullYear()} {profile.name}</span></div></div></footer>
+}

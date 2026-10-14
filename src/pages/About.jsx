@@ -1,0 +1,16 @@
+import { MapPin, ArrowUpRight, Download } from 'lucide-react'
+import PageTransition from '../components/PageTransition'
+import SectionTitle from '../components/SectionTitle'
+import { profile, skills, learning } from '../data/siteData'
+
+export default function About() {
+  return <PageTransition><section className="section-pad page-intro"><div className="container-main">
+    <SectionTitle as="h1" eyebrow="About / The person behind the work" title={<>Curious by nature.<br/><span className="text-gradient">Practical by approach.</span></>} description="I’m Jaseeth, a full-stack software developer based in Doha. I build the interfaces people use and the systems that keep them running."/>
+    <div className="grid gap-8 lg:grid-cols-[.8fr_1.2fr]">
+      <aside className="identity-card"><div className="monogram" aria-hidden="true">JM<span>.</span></div><p className="eyebrow mt-8">{profile.role}</p><h2 className="mt-4 text-3xl font-bold">{profile.name}</h2><p className="mt-3 text-sm leading-6 text-white/60">{profile.fullName}</p><p className="mt-6 flex items-center gap-2 text-white/70"><MapPin size={16}/>{profile.location}</p><a className="text-link mt-8" href={profile.resume} download>Download my CV <Download size={16}/></a></aside>
+      <div className="py-3 lg:pl-5"><h2 className="text-3xl font-bold tracking-tight">From a screen to a working system.</h2><div className="mt-6 space-y-5 text-lg leading-8 text-white/70"><p>My work spans responsive websites, enterprise applications, CMS-driven content and eCommerce. I use ASP.NET Core, C#, JavaScript, React and SQL Server to turn business requirements into usable digital experiences.</p><p>At Al Emadi Enterprises — Alhazm, I work across frontend and backend development: bilingual property listings, APIs, enquiry workflows, CMS components, image optimization and deployment support.</p><p>I’m particularly proud of the Alhazm Indoor Wayfinding project. As the sole frontend developer, I took an interactive SVG navigation system from concept to deployment, supporting 30+ stores.</p><p>I also build n8n workflows that check website health, validate images and metadata, and prepare automated reports. I care about how a product performs after it goes live.</p></div><a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="text-link mt-7">Connect on LinkedIn <ArrowUpRight size={17}/></a></div>
+    </div>
+    <div className="mt-24"><SectionTitle eyebrow="Toolbox" title="The tools behind the work." description="Technologies I use across frontend development, backend systems, content platforms and delivery."/><div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">{Object.entries(skills).map(([group, items]) => <article key={group} className="glass rounded-3xl p-7"><h3 className="font-bold text-[var(--accent)]">{group}</h3><ul className="mt-5 flex flex-wrap gap-2">{items.map(item => <li className="tech-tag" key={item}>{item}</li>)}</ul></article>)}</div></div>
+    <div className="learning-panel mt-10"><div><p className="eyebrow">Continuing to grow</p><h2 className="mt-3 text-2xl font-bold">Currently learning</h2></div><ul className="flex flex-wrap gap-2">{learning.map(item => <li className="tech-tag" key={item}>{item}</li>)}</ul></div>
+  </div></section></PageTransition>
+}
