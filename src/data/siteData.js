@@ -50,7 +50,7 @@ export const projects = [
     contributions: ['Responsive frontend refinements', 'Cofoundry CMS component development', 'Backend-connected functional updates', 'Mobile performance and layout improvements'],
   },
   {
-    slug: 'mclaren-cafe', title: 'McLaren Cafe', website: 'https://mclarencafe.com/', image: 'projects/mclaren-cafe.jpg', category: 'Hospitality Website', type: 'Web & CMS', accent: '#b6a0ff', label: 'Coffee, reservations and catering.',
+    slug: 'mclaren-cafe', title: 'McLaren Cafe', website: 'https://mclarencafe.com/', visual: 'cms', category: 'Hospitality Website', type: 'Web & CMS', accent: '#b6a0ff', label: 'Coffee, reservations and catering.',
     summary: 'A hospitality website bringing menu discovery, table reservation requests and event catering enquiries into one branded experience.',
     tech: ['WordPress', 'Elementor'],
     roleLabel: 'Project overview', role: 'A WordPress and Elementor website for McLaren Cafe, featuring menu browsing, a gallery, reservation forms and catering enquiries.',

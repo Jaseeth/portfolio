@@ -63,10 +63,6 @@ main:focus { outline: none; }
 .project-card-body { flex: 1; }
 .project-card-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 20px; padding: 20px 24px 24px; }
 .project-card-actions a { min-height: 44px; }
-.project-screenshot { margin: 0; background: #161923; }
-.project-screenshot img { display: block; width: 100%; height: auto; aspect-ratio: 1265 / 712; object-fit: cover; }
-.project-screenshot figcaption { padding: 10px 20px; color: #ffffffa3; font-size: .7rem; }
-.project-screenshot-large figcaption { padding: 14px 25px; }
 @media (min-width: 768px) { .project-card-actions { padding: 20px 32px 32px; } }
 .project-card:focus-within { outline: 2px solid var(--accent); outline-offset: 4px; }
 .project-visual { display: flex; flex-direction: column; position: relative; overflow: hidden; min-height: 300px; padding: 23px; background: radial-gradient(ellipse at 80% 100%, color-mix(in srgb, var(--project-accent) 12%, transparent), transparent 70%), #161923; color: var(--project-accent); border-bottom: 1px solid #ffffff0a; }
