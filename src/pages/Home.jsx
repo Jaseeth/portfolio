@@ -14,7 +14,7 @@ export default function Home() {
   ]
   return <PageTransition><Hero/>
     <section id="selected-work" className="section-pad border-t border-white/10"><div className="container-main">
-      <div className="section-heading-row"><SectionTitle eyebrow="01 / Selected work" title={<>Real projects.<br/><span className="text-gradient">Practical impact.</span></>} description="A selection of enterprise websites, interactive experiences and mobile applications I’ve helped bring to production."/><Link to="/projects" className="text-link">All seven projects <ArrowRight size={17}/></Link></div>
+      <div className="section-heading-row"><SectionTitle eyebrow="01 / Selected work" title={<>Real projects.<br/><span className="text-gradient">Practical impact.</span></>} description="A selection of enterprise websites, interactive experiences and mobile applications I’ve helped bring to production."/><Link to="/projects" className="text-link">All {projects.length} projects <ArrowRight size={17}/></Link></div>
       <div className="grid gap-6 lg:grid-cols-2">{projects.slice(0, 4).map((p, i) => <ProjectCard key={p.slug} project={p} index={i}/>)}</div>
     </div></section>
     <section className="section-pad border-y border-white/10 bg-white/[.015]"><div className="container-main">

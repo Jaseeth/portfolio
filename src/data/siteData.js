@@ -17,7 +17,7 @@ export const learning = ['TypeScript', 'xUnit', 'Playwright', 'CI/CD']
 
 export const projects = [
   {
-    slug: 'al-emadi-property', title: 'Al Emadi Property', category: 'Enterprise Web', type: 'Web & CMS', visual: 'property', accent: '#94b8ff', label: 'Bilingual property platform',
+    website: 'https://alemadi.com.qa/', slug: 'al-emadi-property', title: 'Al Emadi Property', category: 'Enterprise Web', type: 'Web & CMS', visual: 'property', accent: '#94b8ff', label: 'Bilingual property platform',
     summary: 'A bilingual real estate platform connecting property discovery, content management and automated website monitoring.',
     tech: ['ASP.NET Core', 'Cofoundry CMS', 'JavaScript', 'Entity Framework', 'SQL Server', 'Cloudinary', 'n8n'],
     role: 'Full-stack development and enhancement: frontend interfaces, backend features, database integration, enquiry forms and monitoring automation.',
@@ -39,7 +39,7 @@ export const projects = [
     contributions: ['Frontend concept and implementation', 'SVG path rendering and destination interactions', 'Touch-enabled navigation behavior', 'Live deployment delivery'],
   },
   {
-    slug: 'al-hazm-website', title: 'Alhazm Website', category: 'Enterprise Web', type: 'Web & CMS', visual: 'cms', accent: '#a2adff', label: 'A destination, connected.',
+    website: 'https://alhazm.com/', slug: 'al-hazm-website', title: 'Alhazm Website', category: 'Enterprise Web', type: 'Web & CMS', visual: 'cms', accent: '#a2adff', label: 'A destination, connected.',
     summary: 'Ongoing frontend and backend development for Alhazm’s CMS-driven website.',
     tech: ['ASP.NET Core', 'Cofoundry CMS', 'Bootstrap', 'SQL Server'],
     role: 'Frontend and backend contributor, supporting responsive UI, CMS components and API-driven updates.',
@@ -50,7 +50,18 @@ export const projects = [
     contributions: ['Responsive frontend refinements', 'Cofoundry CMS component development', 'Backend-connected functional updates', 'Mobile performance and layout improvements'],
   },
   {
-    slug: 'teeb-alhazm', title: 'Teeb Alhazm Website', category: 'Brand Experience', type: 'Web & CMS', visual: 'brand', accent: '#cfadff', label: 'From design to production.',
+    slug: 'mclaren-cafe', title: 'McLaren Cafe', website: 'https://mclarencafe.com/', image: 'projects/mclaren-cafe.jpg', category: 'Hospitality Website', type: 'Web & CMS', accent: '#b6a0ff', label: 'Coffee, reservations and catering.',
+    summary: 'A hospitality website bringing menu discovery, table reservation requests and event catering enquiries into one branded experience.',
+    tech: ['WordPress', 'Elementor'],
+    roleLabel: 'Project overview', role: 'A WordPress and Elementor website for McLaren Cafe, featuring menu browsing, a gallery, reservation forms and catering enquiries.',
+    challenge: 'Help guests explore the café offering and find a clear path to table reservations or event catering.',
+    solution: 'The website combines coffee and dessert menus with reservation pages, a photo gallery and contact information. Catering pages present packages and collect event details such as date, time and guest count.',
+    outcome: 'A published café website with dedicated journeys for discovering the menu, requesting a table and enquiring about catering.',
+    highlights: ['Menu discovery', 'Reservation requests', 'Event catering'],
+    contributionsLabel: 'Website features', contributions: ['Coffee, matcha and dessert menus', 'Table reservation request form', 'Catering packages and event enquiry form', 'Gallery and contact pages'],
+  },
+  {
+    website: 'https://teebalhazm.com/', slug: 'teeb-alhazm', title: 'Teeb Alhazm Website', category: 'Brand Experience', type: 'Web & CMS', visual: 'brand', accent: '#cfadff', label: 'From design to production.',
     summary: 'Frontend redesign and backend feature support, translating Figma designs into production templates.',
     tech: ['HTML5', 'CSS3', 'JavaScript', 'ASP.NET Core', 'Cofoundry CMS'],
     role: 'Frontend UI contributor with backend feature support, collaborating with the design team.',
@@ -61,7 +72,7 @@ export const projects = [
     contributions: ['Frontend UI redesign', 'Production template implementation', 'Backend feature support', 'Design collaboration and visual consistency'],
   },
   {
-    slug: 'elite-super-cars', title: 'EliteSuper Cars', category: 'Automotive Platform', type: 'Web & CMS', visual: 'vehicle', accent: '#8bbcff', label: 'Discover. Filter. Explore.',
+    website: 'https://elitesupercars.qa/', slug: 'elite-super-cars', title: 'EliteSuper Cars', category: 'Automotive Platform', type: 'Web & CMS', visual: 'vehicle', accent: '#8bbcff', label: 'Discover. Filter. Explore.',
     summary: 'Custom UI and backend-connected vehicle discovery for a luxury car dealership platform.',
     tech: ['ASP.NET Core', 'JavaScript', 'Bootstrap', 'Cofoundry CMS'],
     role: 'Developer contributing custom UI components and backend-connected features.',
@@ -72,13 +83,13 @@ export const projects = [
     contributions: ['Custom UI components', 'Dynamic vehicle listing interface', 'Search and filtering functionality', 'Backend feature integration'],
   },
   {
-    slug: 'top-performance', title: 'Topperformance Web & App', category: 'Web & Mobile', type: 'Mobile', visual: 'mobile', accent: '#a899ff', label: 'One experience. Two platforms.',
-    summary: 'Website frontend development and mobile interface support with a consistent experience across platforms.',
+    website: 'https://topperformance.qa/', slug: 'top-performance', title: 'Topperformance Web & App', category: 'Web & Mobile', type: 'Mobile', visual: 'mobile', accent: '#a899ff', label: 'One experience. Two platforms.',
+    summary: 'Frontend development for the original ASP.NET Core website, alongside mobile interface support. The current live storefront runs on Shopify.',
     tech: ['ASP.NET Core', 'Flutter', 'Dart'],
     role: 'Website frontend developer and contributor to mobile application interface screens.',
     challenge: 'Maintain design consistency between the website and mobile application.',
     solution: 'Developed the website frontend and supported mobile interface screens using Flutter and Dart.',
-    outcome: 'Supported a consistent design language across web and mobile interfaces.',
+    outcome: 'Supported a consistent design language across the original web and mobile interfaces. The website has since moved from ASP.NET Core to Shopify; the live link opens the current storefront.',
     highlights: ['Website frontend', 'Flutter screens', 'Consistent design'],
     contributions: ['Website frontend implementation', 'Mobile application UI support', 'Web and mobile design consistency'],
   },

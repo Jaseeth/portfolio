@@ -1,5 +1,6 @@
 export default function ProjectVisual({ project, large = false }) {
   const { visual, accent, label } = project
+  if (project.image) return <figure className={`project-screenshot ${large ? 'project-screenshot-large' : ''}`}><img src={`${import.meta.env.BASE_URL}${project.image}`} alt={`${project.title} live website homepage`} loading="lazy" decoding="async" width="1265" height="712"/><figcaption>Live website screenshot</figcaption></figure>
   return <div className={`project-visual ${large ? 'project-visual-large' : ''}`} style={{ '--project-accent': accent }}>
     <div className="visual-grid" aria-hidden="true"/>
     <div className="visual-topline"><span>PROJECT / {visual === 'map' ? 'INTERACTION' : visual === 'mobile' ? 'APPLICATION' : 'WEB SYSTEM'}</span><span className="visual-dot"/></div>
