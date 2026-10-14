@@ -24,11 +24,17 @@ The original CV is downloadable from `public/Mohamed_Jaseeth_Software_Developer_
 
 ## Contact
 
-The contact form opens a `mailto:` draft with encoded name, reply address, subject and message. Visitors must send the email from their mail app. It does not submit data to a server, store messages or claim delivery. Email, telephone and LinkedIn links provide direct alternatives. No contact-service account or credentials are required.
+The contact form submits directly to FormSubmit’s AJAX endpoint and forwards enquiries to the public profile email. Visitors stay on the page and do not need an email app. No API key or mailbox password is shipped to the browser. FormSubmit requires a one-time activation: submit a clearly labeled setup message from the live website, then click **Activate Form** in the recipient inbox (check Spam too). After activation, submit another test to verify inbox receipt. The sender’s address is included as Reply-To.
+
+The form validates fields, blocks duplicate clicks while sending, includes a hidden honeypot, preserves the visitor’s input on failures and clears it only after an explicit successful provider response. HTTP 200 alone is not treated as success: both boolean and string success values are checked. Activation, rejection, offline and timeout responses show a direct-email fallback. A success response confirms provider acceptance, not guaranteed inbox delivery. Visitor-facing text discloses that FormSubmit processes form data. Contact-service privacy and availability are governed by https://formsubmit.co/.
+
+Run the delivery-response tests with `node --test tests/contact.test.mjs`. They mock requests and do not send emails.
 
 ## Deployment
 
 Build output is `dist/`. GitHub Pages deployment is configured in `.github/workflows/deploy.yml` and runs on pushes to `main` or manual dispatch. In the GitHub repository, select **Settings → Pages → Source → GitHub Actions** before the first deployment. The workflow derives the root or repository base path from GitHub Pages, builds with Node.js 24 and npm, and publishes only `dist/`.
+
+The current public repository is `Jaseeth/portfolio`, using **main /docs** branch publishing. Build with `VITE_BASE_PATH=/portfolio/`, then synchronize the generated `dist/` files to tracked `docs/` before committing. Include `.nojekyll` and remove obsolete generated asset files when synchronizing.
 
 `npm run build:pages` builds the application and writes entry documents for every page and project route, plus `404.html` and `.nojekyll`. This supports direct links and refreshes on GitHub Pages without hash-based URLs. CV, favicon, scripts and styles honor the deployment prefix. The build generates per-project titles and descriptions in entry HTML; page content itself remains client-rendered. Unknown paths use the custom 404 document.
 

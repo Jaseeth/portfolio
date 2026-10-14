@@ -105,6 +105,13 @@ a.contact-method:hover { border-color: #9ebaff50; background: #ffffff03; }
 .form-input { display: block; width: 100%; margin-top: 9px; border: 1px solid #ffffff26; border-radius: 8px; background: #11131870; padding: 12px 14px; color: #fff; }
 .form-input::placeholder { color: #ffffff80; }
 .form-input:focus { border-color: var(--accent); }
+.contact-honeypot { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.btn-primary:disabled { opacity: .65; cursor: wait; transform: none; }
+.contact-feedback:not(:empty) { display: flex; align-items: flex-start; gap: 10px; margin-top: 22px; padding: 15px; border: 1px solid #9ebaff40; border-radius: 10px; background: #9ebaff0a; color: var(--accent); font-size: .85rem; line-height: 1.8; }
+.contact-feedback svg { flex-shrink: 0; margin-top: 3px; }
+.contact-feedback-error:not(:empty) { color: #ffc4ce; border-color: #ffa3b333; background: #ffa3b308; }
+.contact-spinner { animation: contact-spin 1s linear infinite; }
+@keyframes contact-spin { to { transform: rotate(360deg); } }
 .site-footer { border-top: 1px solid var(--border); padding-block: 50px 25px; }
 .site-footer a:hover { color: var(--accent); }
 .social-link { display: inline-flex; align-items: center; justify-content: center; padding: 13px; border: 1px solid #ffffff24; border-radius: 10px; }
