@@ -17,15 +17,15 @@ export const learning = ['TypeScript', 'xUnit', 'Playwright', 'CI/CD']
 
 export const projects = [
   {
-    website: 'https://alemadi.com.qa/', slug: 'al-emadi-property', title: 'Al Emadi Property', category: 'Enterprise Web', type: 'Web & CMS', visual: 'property', accent: '#94b8ff', label: 'Bilingual property platform',
-    summary: 'A bilingual real estate platform connecting property discovery, content management and automated website monitoring.',
-    tech: ['ASP.NET Core', 'Cofoundry CMS', 'JavaScript', 'Entity Framework', 'SQL Server', 'Cloudinary', 'n8n'],
-    role: 'Full-stack development and enhancement: frontend interfaces, backend features, database integration, enquiry forms and monitoring automation.',
-    challenge: 'Support English and Arabic property discovery while keeping listings manageable and the production website healthy.',
-    solution: 'Developed dynamic property listings, search and filters, detail pages and CMS integrations. Connected SQL Server through Entity Framework, implemented REST APIs and enquiry forms, and improved metadata and Cloudinary image delivery.',
-    outcome: 'Delivered a CMS-driven property experience with bilingual interfaces and optimized image delivery. Added n8n monitoring for HTTP errors, metadata, image validation, response times and automated health reports.',
-    highlights: ['English / Arabic', 'Property discovery', 'Automated health reports'],
-    contributions: ['Dynamic listings and property detail pages', 'SQL Server data models and enquiry workflows', 'Cloudinary and WebP image optimization', 'n8n content synchronization and website health checks'],
+    website: 'https://alemadi.com.qa/', slug: 'al-emadi-property', title: 'Al Emadi Property Platform', category: 'Enterprise Web', type: 'Web & CMS', visual: 'property', accent: '#94b8ff', label: 'Bilingual property platform',
+    summary: 'A bilingual, CMS-driven real estate platform combining guided property discovery, real-time customer support, enquiry management, automated reporting, and production website monitoring.',
+    tech: ['ASP.NET Core', 'C#', 'Cofoundry CMS', 'Entity Framework Core', 'SQL Server', 'SignalR', 'JavaScript', 'REST APIs', 'Web Push', 'PWA', 'Cloudinary', 'n8n', 'IIS'],
+    role: 'Full-stack development and production enhancement across frontend interfaces, ASP.NET Core services, SQL Server data models, CMS integrations, real-time communication, deployment, and monitoring automation.',
+    challenge: 'Create a reliable English and Arabic property experience that helps customers discover suitable listings, connect with the correct representative, and allows the business to monitor website content and performance automatically.',
+    solution: 'Enhanced the existing ASP.NET Core and Cofoundry platform with dynamic property listings, advanced filters, responsive property pages, REST APIs, enquiry workflows, and Cloudinary image optimization.\n\nImplemented a bilingual, rule-based property assistant and a real-time property chat system using SignalR, SQL Server, browser push notifications, email fallback, OTP-based agent access, conversation history, transcripts, language-based routing, and mobile PWA installation.\n\nBuilt n8n workflows for content synchronization, GA4 traffic reporting, HTTP monitoring, metadata and image validation, response-time measurement, PDF generation, scheduled email delivery, and server-restart recovery.',
+    outcome: 'Delivered an integrated property and customer-support platform with bilingual discovery, real-time agent communication, persistent conversation records, configurable admin controls, optimized media delivery, automated daily traffic reports, and health monitoring covering more than 180 production URLs.',
+    highlights: ['English / Arabic', 'Real-time agent chat', '180+ monitored URLs'],
+    contributions: ['English and Arabic property discovery and filtering', 'Rule-based property recommendation assistant', 'Real-time customer-to-agent chat using SignalR', 'SQL Server conversation, customer and notification models', 'OTP agent authentication and remembered-device sessions', 'Browser push notifications and email fallback', 'Mobile PWA installation and responsive chat interfaces', 'Conversation routing, lifecycle management and transcripts', 'Admin feature controls for chat and property assistance', 'Cloudinary and WebP image optimization', 'SEO and metadata improvements', 'Automated GA4 traffic and website-health PDF reports', 'n8n workflows, scheduled execution and server recovery'],
   },
   {
     slug: 'indoor-wayfinding', title: 'Alhazm Indoor Wayfinding', category: 'Interactive Experience', type: 'Interactive', visual: 'map', accent: '#b6a0ff', label: '30+ stores. One intuitive journey.',
