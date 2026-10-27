@@ -47,8 +47,8 @@ export const projects = [
     role: 'Sole frontend developer, taking the project from concept through live deployment.',
     challenge: 'Help shoppers navigate more than 30 stores through a clear, touch-enabled interface.',
     solution: 'Built the interactive navigation experience using SVG path rendering and JavaScript event handling, with Cofoundry CMS supporting destination content.',
-    outcome: 'Delivered visual navigation for 30+ stores. Received a Good Work Certificate from the CEO of Al Emadi Enterprises for independently delivering a technically innovative solution.',
-    highlights: ['30+ stores', 'Sole frontend developer', 'CEO recognition'],
+    outcome: 'Delivered a touch-enabled visual navigation experience for 30+ stores, taking the frontend from concept to live deployment.',
+    highlights: ['30+ stores', 'Sole frontend developer', 'Live deployment'],
     contributions: ['Frontend concept and implementation', 'SVG path rendering and destination interactions', 'Touch-enabled navigation behavior', 'Live deployment delivery'],
   },
   {
@@ -136,7 +136,7 @@ export const education = [
   { period: '2022 — 2023', title: 'HND in Computer Software Engineering', institution: 'ESOFT Metro Campus, Sri Lanka', detail: 'Full-stack web development, UI/UX design principles and software engineering practices.' },
 ]
 export const achievements = [
-  { title: 'Good Work Certificate', detail: 'Awarded by the CEO of Al Emadi Enterprises for independently delivering the Alhazm Indoor Wayfinding project.' },
+  { title: 'Good Work Certificate', detail: 'Awarded by the CEO of Al Emadi Enterprises in recognition of strong performance, technical contributions and commitment to delivering quality work.' },
   { title: 'ESOFT hackathon participant', detail: 'Built a functional HTML, CSS and JavaScript web application in a time-constrained coding competition.' },
   { title: 'Life Beyond HND', detail: 'Completed an outbound workshop on digital entrepreneurship and product thinking.' },
 ]
