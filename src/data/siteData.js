@@ -17,10 +17,17 @@ export const learning = ['TypeScript', 'xUnit', 'Playwright', 'CI/CD']
 
 export const projects = [
   {
-    slug: 'al-emadi-meeting-room-booking', title: 'Al Emadi Meeting Room Booking Portal', category: 'Internal Business Application', type: 'Web & CMS', visual: 'cms', accent: '#94b8ff', label: 'One center. One room calendar.', caseStudy: 'meeting-room',
+    slug: 'al-emadi-meeting-room-booking', title: 'Al Emadi Meeting Room Booking Portal', category: 'Internal Business Application', type: 'Web & CMS', visual: 'cms', accent: '#94b8ff', label: 'One center. One room calendar.',
     summary: 'A deployed internal booking portal replacing manual meeting room coordination with client reservations, email verification and practical administration across business centers.',
     tech: ['React', 'ASP.NET Core', 'SQL Server', 'REST APIs', 'Email OTP', 'CSV reporting', 'IIS', 'HTTPS'],
+    roleLabel: 'Project overview',
+    role: 'An internal application combining client reservations with center, office and booking administration. Deployed to IIS over HTTPS.',
+    challenge: 'Replace manual meeting room coordination across business centers with clear availability, reliable reservations and practical administrative control.',
+    solution: 'Built with a responsive React frontend, an ASP.NET Core API and SQL Server persistence. Clients choose a center, review its room calendar, select an office when configured, enter meeting details and verify their email with a one-time code. Each center has one room calendar; offices provide booking attribution only.\n\nServer-side availability and conflict validation prevent overlapping reservations. Clients can reschedule, update notes or participants, and cancel with a reason. Administrators manage centers, schedules, offices, bookings, supervisor access, reports and notification settings, supported by asynchronous email delivery and audit logging.',
+    outcome: 'A deployed booking portal bringing reservations, booking changes and administration into one system, with configurable center schedules, role-based access, CSV reports and relevant email updates for participants and configured recipients.',
     highlights: ['Center-based calendars', 'Email verification', 'Role-based management'],
+    contributionsLabel: 'Key features',
+    contributions: ['One meeting room calendar per center, with configurable capacity, operating hours and available days', 'Office selection for booking attribution without separate room calendars', 'Email OTP verification and asynchronous booking notifications', 'Client booking management, rescheduling and cancellation with a reason', 'Meeting notes, participant updates and relevant email notifications', 'Administrator and supervisor access, with an administrator-only activity log', 'Center, office and booking management, CSV reports and configurable settings', 'Server-side conflict validation and IIS deployment over HTTPS'],
   },
   {
     website: 'https://alemadi.com.qa/', slug: 'al-emadi-property', title: 'Al Emadi Property Platform', category: 'Enterprise Web', type: 'Web & CMS', visual: 'property', accent: '#94b8ff', label: 'Bilingual property platform',

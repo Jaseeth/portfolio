@@ -64,24 +64,6 @@ main:focus { outline: none; }
 .project-card-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 20px; padding: 20px 24px 24px; }
 .project-card-actions a { min-height: 44px; }
 @media (min-width: 768px) { .project-card-actions { padding: 20px 32px 32px; } }
-.booking-study-title { max-width: 1000px; font-size: clamp(2.3rem, 5.5vw, 4.5rem); font-weight: 650; line-height: 1.12; letter-spacing: -.045em; }
-.booking-study-section { scroll-margin-top: 125px; }
-.booking-study-copy { color: #ffffffbf; font-size: 1rem; line-height: 1.85; }
-.booking-study-copy > p + p { margin-top: 20px; }
-.booking-study-copy strong { color: #f3f4f8; }
-.booking-workflow { padding: 25px; border: 1px solid var(--border); border-radius: 20px; background: #161923; }
-.booking-workflow-layout { display: grid; gap: 32px; }
-.booking-flow-list { list-style: decimal; padding-left: 23px; }
-.booking-flow-list li { padding-left: 7px; margin-block: 12px; }
-.booking-flow-list li::marker { color: var(--accent); font-weight: 600; }
-.booking-calendar, .booking-admin-preview { background: #111318; padding: 22px; border-radius: 12px; }
-.booking-admin-preview dt { font-weight: 600; color: #f3f4f8; }
-.booking-admin-preview dd { margin-top: 4px; font-size: .9rem; color: #ffffffb3; }
-.booking-architecture { display: flex; flex-direction: column; align-items: stretch; gap: 14px; margin-block: 30px; }
-.booking-architecture > div { padding: 18px 22px; border-radius: 10px; background: #9ebaff09; }
-.booking-architecture span { display: block; margin-top: 4px; font-size: .9rem; }
-.booking-architecture > svg { align-self: center; transform: rotate(90deg); color: var(--accent); }
-@media (max-width: 600px) { .booking-workflow { padding: 20px 16px; } .booking-calendar { padding: 16px 12px; } }
 .project-card:focus-within { outline: 2px solid var(--accent); outline-offset: 4px; }
 .project-visual { display: flex; flex-direction: column; position: relative; overflow: hidden; min-height: 300px; padding: 23px; background: radial-gradient(ellipse at 80% 100%, color-mix(in srgb, var(--project-accent) 12%, transparent), transparent 70%), #161923; color: var(--project-accent); border-bottom: 1px solid #ffffff0a; }
 .visual-grid { position: absolute; inset: 0; opacity: .25; background-image: linear-gradient(#ffffff0a 1px, transparent 1px), linear-gradient(90deg, #ffffff0a 1px, transparent 1px); background-size: 24px 24px; mask-image: linear-gradient(130deg, black, transparent); }

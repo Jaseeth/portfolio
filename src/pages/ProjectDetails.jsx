@@ -3,7 +3,6 @@ import { Link, useParams } from 'react-router-dom'
 import PageTransition from '../components/PageTransition'
 import ProjectVisual from '../components/ProjectVisual'
 import NotFound from './NotFound'
-import MeetingRoomCaseStudy from '../components/MeetingRoomCaseStudy'
 import { projects } from '../data/siteData'
 
 export default function ProjectDetails() {
@@ -12,7 +11,6 @@ export default function ProjectDetails() {
   const project = projects[index]
   if (!project) return <NotFound project/>
   const next = projects[(index + 1) % projects.length]
-  if (project.caseStudy === 'meeting-room') return <MeetingRoomCaseStudy project={project}/>
   return <PageTransition><section className="page-intro pb-24"><div className="container-main">
     <Link to="/projects" className="text-link mb-10"><ArrowLeft size={16}/> All projects</Link>
     <p className="eyebrow">Case study / {project.category}</p><h1 className="project-title mt-5">{project.title}</h1><p className="mt-7 max-w-3xl text-xl leading-8 text-white/70">{project.summary}</p>
