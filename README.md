@@ -22,7 +22,7 @@ Vite ignores Visual Studio's `.vs` index to avoid locked-file watcher errors.
 
 The original CV is downloadable from `public/Mohamed_Jaseeth_Software_Developer_CV.pdf`. Update this file when changing résumé content. Certification entries are explicitly in progress; education dates follow the CV without asserting graduation status.
 
-The Al Emadi Meeting Room Booking Portal case study documents the supplied deployed internal application. Role, dates, team size, results and approved screenshot slots are explicitly marked as unconfirmed. Workflow and calendar visuals are illustrative, with sample availability rather than production booking data. No private application URL is exposed.
+The Al Emadi Meeting Room Booking Portal case study documents the supplied deployed internal application. Unconfirmed role, dates, team size, metrics and screenshot placeholders are omitted from the published page. Workflow visuals describe supplied product behavior without sample reservations. No private application URL is exposed.
 
 ## Contact
 

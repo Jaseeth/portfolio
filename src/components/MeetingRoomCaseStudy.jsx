@@ -5,7 +5,7 @@ import PageTransition from './PageTransition'
 import ProjectVisual from './ProjectVisual'
 
 const sections = [
-  ['overview', 'Project overview & role'],
+  ['overview', 'Project overview'],
   ['problem', 'The coordination problem'],
   ['decisions', 'Goals & design decisions'],
   ['client', 'Client booking flow'],
@@ -20,7 +20,7 @@ const adminSteps = ['Configure centers & offices', 'Set schedules & capacity', '
 function WorkflowIllustration() {
   const [view, setView] = useState('client')
   return <figure className="booking-workflow mt-10">
-    <figcaption className="text-sm leading-6 text-white/65">Workflow illustration based on the supplied product brief. Sample calendar states; not a production screenshot.</figcaption>
+    <figcaption className="text-sm leading-6 text-white/65">Client and administrator workflows, based on the implemented product features.</figcaption>
     <div className="mt-6 flex flex-wrap gap-2" role="group" aria-label="Choose illustrated workflow">
       {['client', 'admin'].map(item => <button key={item} type="button" className={`filter-button ${view === item ? 'active' : ''}`} aria-pressed={view === item} onClick={() => setView(item)}>{item === 'client' ? 'Client booking' : 'Administration'}</button>)}
     </div>
@@ -28,10 +28,9 @@ function WorkflowIllustration() {
       <div><h3 className="text-2xl font-bold">{view === 'client' ? 'One center. One calendar.' : 'The operational view.'}</h3>
         <ol className="booking-flow-list mt-6">{(view === 'client' ? clientSteps : adminSteps).map(step => <li key={step}>{step}</li>)}</ol>
       </div>
-      {view === 'client' ? <div className="booking-calendar" aria-label="Illustrative center calendar with sample availability">
+      {view === 'client' ? <div className="booking-calendar" aria-label="Center calendar responsibilities">
         <p className="font-semibold">Selected center · Meeting room</p><p className="mt-2 text-sm text-white/65">Office selection attributes the booking to an office.</p>
-        <div className="booking-calendar-grid mt-6">{['Day A', 'Day B', 'Day C'].map(day => <div key={day}><p className="mb-3 text-sm font-semibold">{day}</p>{['Available', 'Reserved', 'Available'].map((state, i) => <div key={i} className={`booking-calendar-slot ${state === 'Reserved' ? 'reserved' : ''}`}>{state}</div>)}</div>)}</div>
-        <p className="mt-4 text-sm text-white/65">Illustration only. Available days and hours depend on each center’s configuration.</p>
+        <p className="mt-4 text-sm text-white/65">Each center has one meeting room calendar. Available days, operating hours and capacity are configured for that center.</p>
       </div> : <div className="booking-admin-preview">
         <h4 className="font-semibold">Management responsibilities</h4><dl className="mt-5 space-y-5">
           <div><dt>Centers & offices</dt><dd>Room calendar, capacity, schedules and booking attribution.</dd></div>
@@ -61,9 +60,8 @@ export default function MeetingRoomCaseStudy({ project }) {
       <p className="eyebrow mt-10">Technology</p><ul className="mt-4 flex flex-wrap gap-2">{project.tech.map(tech => <li className="tech-tag" key={tech}>{tech}</li>)}</ul>
       <p className="mt-8 text-sm leading-6 text-white/65">Deployed internal application. No public application link is provided.</p>
     </aside><div className="space-y-16">
-      <StudySection id="overview" title="Project overview & role">
+      <StudySection id="overview" title="Project overview">
         <p>An internal web application for managing meeting room reservations across multiple business centers and offices. The deployed portal replaces manual coordination with a clear booking experience for clients and a practical management experience for administrators.</p>
-        <dl className="booking-project-facts"><div><dt>My role</dt><dd>[Exact role and responsibilities to be confirmed]</dd></div><div><dt>Project dates</dt><dd>[Dates to be confirmed]</dd></div><div><dt>Team</dt><dd>[Team size and collaboration details to be confirmed]</dd></div><div><dt>Results</dt><dd>[Measured results to be added when available]</dd></div></dl>
       </StudySection>
       <StudySection id="problem" title="The coordination problem">
         <p>Manual coordination makes it difficult to establish which room is available, capture complete meeting details and keep everyone informed when plans change. Across several locations, the booking experience also needs to account for different schedules, capacities and office structures.</p>
@@ -76,13 +74,11 @@ export default function MeetingRoomCaseStudy({ project }) {
         <p>Clients choose a business center, review that center’s meeting room calendar and available times, and select an office when offices are configured for the center. They enter meeting details and verify their email using a one-time code.</p>
         <p>After booking, clients can reschedule to available times, update notes or participants, and cancel with a reason. Participants receive relevant booking updates. Confirmations and configurable notifications are sent to recipient email addresses.</p>
         <WorkflowIllustration/>
-        <p className="booking-screenshot-placeholder">[Approved screenshot: client calendar, booking details and email-verification workflow]</p>
       </StudySection>
       <StudySection id="admin" title="Admin management">
         <p>Administrators manage centers and their offices, reservations, supervisor access, reports and operational settings. Each center’s capacity, operating hours and available days shape the booking options shown to clients.</p>
-        <p>Role-based access separates administrator and supervisor access. The activity log is restricted to administrators; specific supervisor permissions should be documented before describing them in more detail.</p>
+        <p>Role-based access separates administrator and supervisor access. The activity log is restricted to administrators.</p>
         <p>CSV reports support operational review. Configurable notification recipients let the business direct booking emails to the appropriate email addresses.</p>
-        <p className="booking-screenshot-placeholder">[Approved screenshot: admin bookings, center settings and reporting screens]</p>
       </StudySection>
       <StudySection id="architecture" title="Technical architecture">
         <p>The React frontend provides responsive calendar and booking interfaces. An ASP.NET Core API handles booking operations and server-side validation, with SQL Server persisting reservation and configuration data.</p>
@@ -92,13 +88,11 @@ export default function MeetingRoomCaseStudy({ project }) {
         <p>Email OTP verification confirms access to the supplied email address. Asynchronous email delivery supports confirmations and relevant booking updates. Audit logging records activity, and CSV reporting supports management tasks.</p>
       </StudySection>
       <StudySection id="reliability" title="Security & reliability">
-        <ul className="detail-list"><li><strong>Validate on the server.</strong> The API checks availability and conflicts to prevent overlapping reservations. The calendar interface is not the final authority on availability.</li><li><strong>Account for concurrent requests.</strong> Two clients may select the same time before either completes a booking. Server-side conflict validation is essential; the exact transaction or locking strategy is [to be confirmed].</li><li><strong>Separate access by role.</strong> Administrator and supervisor access is role-based, with the activity log restricted to administrators.</li><li><strong>Verify email and protect transport.</strong> Clients verify email with an OTP, and the deployed application uses HTTPS. OTP expiry, attempt limits and session controls are [to be confirmed].</li><li><strong>Keep delivery operationally visible.</strong> Emails are delivered asynchronously. Retry behavior, failure handling and delivery monitoring are [to be confirmed].</li></ul>
+        <ul className="detail-list"><li><strong>Validate on the server.</strong> The API checks availability and conflicts to prevent overlapping reservations. The calendar interface is not the final authority on availability.</li><li><strong>Account for concurrent requests.</strong> Two clients may select the same time before either completes a booking. The API validates availability and conflicts on the server to prevent overlapping reservations.</li><li><strong>Separate access by role.</strong> Administrator and supervisor access is role-based, with the activity log restricted to administrators.</li><li><strong>Verify email and protect transport.</strong> Clients verify email with an OTP, and the deployed application uses HTTPS.</li><li><strong>Send updates asynchronously.</strong> Emails are delivered asynchronously.</li></ul>
       </StudySection>
       <StudySection id="delivery" title="Deployment & lessons">
         <p>The application is deployed to IIS over HTTPS, serving the React experience and ASP.NET Core API with SQL Server persistence.</p>
         <p>The central design takeaway is the separation of a physical resource from booking metadata: the center owns the room calendar, while an office provides attribution. Another is keeping availability validation in the API, so the booking rules apply beyond what the client interface displays.</p>
-        <p>[Personal lessons learned, deployment responsibilities and release process to be confirmed.]</p>
-        <p>[Measurable results, usage data and stakeholder feedback to be added when approved.]</p>
       </StudySection>
     </div></div>
     <div className="next-project mt-20"><div><p className="eyebrow">Explore another project</p><Link className="mt-4 inline-flex items-center gap-4 text-2xl font-bold md:text-4xl" to="/projects/al-emadi-property">Al Emadi Property Platform <ArrowRight className="shrink-0"/></Link></div><Link className="btn-secondary" to="/contact">Let’s discuss your project <ArrowRight size={17}/></Link></div>
