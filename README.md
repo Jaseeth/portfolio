@@ -1,6 +1,6 @@
 # Jaseeth Mohamed — Portfolio
 
-React / Vite portfolio with eight project case studies, employment history, education, recognition and direct contact options.
+React / Vite portfolio with nine project case studies, employment history, education, recognition and direct contact options.
 
 ## Run locally
 
@@ -21,6 +21,8 @@ Vite ignores Visual Studio's `.vs` index to avoid locked-file watcher errors.
 `src/data/siteData.js` contains the public profile, projects, employment, education and skills. Content follows the supplied October 2026 CV. External website URLs were supplied by the owner. McLaren Cafe includes a description based on its public pages; its project overview does not assert an unconfirmed personal contribution. All project graphics are illustrative system views. Topperformance distinguishes the original ASP.NET Core work from the current Shopify storefront.
 
 The original CV is downloadable from `public/Mohamed_Jaseeth_Software_Developer_CV.pdf`. Update this file when changing résumé content. Certification entries are explicitly in progress; education dates follow the CV without asserting graduation status.
+
+The Al Emadi Meeting Room Booking Portal case study documents the supplied deployed internal application. Role, dates, team size, results and approved screenshot slots are explicitly marked as unconfirmed. Workflow and calendar visuals are illustrative, with sample availability rather than production booking data. No private application URL is exposed.
 
 ## Contact
 

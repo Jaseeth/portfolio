@@ -17,6 +17,13 @@ export const learning = ['TypeScript', 'xUnit', 'Playwright', 'CI/CD']
 
 export const projects = [
   {
+    slug: 'al-emadi-meeting-room-booking', title: 'Al Emadi Meeting Room Booking Portal', category: 'Internal Business Application', type: 'Web & CMS', visual: 'cms', accent: '#94b8ff', label: 'One center. One room calendar.', caseStudy: 'meeting-room',
+    summary: 'A deployed internal booking portal replacing manual meeting room coordination with client reservations, email verification and practical administration across business centers.',
+    tech: ['React', 'ASP.NET Core', 'SQL Server', 'REST APIs', 'Email OTP', 'CSV reporting', 'IIS', 'HTTPS'],
+    role: '[Exact role and responsibilities to be confirmed]',
+    highlights: ['Center-based calendars', 'Email verification', 'Role-based management'],
+  },
+  {
     website: 'https://alemadi.com.qa/', slug: 'al-emadi-property', title: 'Al Emadi Property Platform', category: 'Enterprise Web', type: 'Web & CMS', visual: 'property', accent: '#94b8ff', label: 'Bilingual property platform',
     summary: 'A bilingual, CMS-driven real estate platform combining guided property discovery, real-time customer support, enquiry management, automated reporting, and production website monitoring.',
     tech: ['ASP.NET Core', 'C#', 'Cofoundry CMS', 'Entity Framework Core', 'SQL Server', 'SignalR', 'JavaScript', 'REST APIs', 'Web Push', 'PWA', 'Cloudinary', 'n8n', 'IIS'],
