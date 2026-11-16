@@ -17,6 +17,17 @@ export const learning = ['TypeScript', 'xUnit', 'Playwright', 'CI/CD']
 
 export const projects = [
   {
+    slug: 'whatsapp-campaign-portal', title: 'WhatsApp Campaign Portal', category: 'Campaign Management', type: 'Web & CMS', visual: 'cms', accent: '#a2adff', label: 'Campaigns across web and mobile',
+    summary: 'A web and mobile platform for creating, scheduling and tracking WhatsApp campaigns across projects, each with its own sender.',
+    tech: ['ASP.NET Core', 'Razor', 'JavaScript', 'SQL Server', 'Twilio WhatsApp API', 'Android', 'Swift / UIKit', 'IIS', 'xUnit', 'Playwright', 'SQL Server LocalDB'],
+    role: 'I developed the campaign portal and connected Android and iPhone apps to the same platform. My work covered campaign workflows, template access, opt-out handling, reporting and automated testing.',
+    challenge: 'Teams needed one place to prepare and track campaigns while keeping each project’s sender separate, controlling access to approved templates and honoring recipients’ opt-outs.',
+    solution: 'I built a three-step campaign wizard that saves drafts, reopens them at the saved step and restores selected recipients. Teams can select recipients from mobile contacts, enter them manually, import a CSV or use a saved group before scheduling a campaign.\n\nI assigned each project its own WhatsApp sender and gave administrators control over who could use approved templates. Teams can submit templates with images, videos, PDFs and buttons through Twilio for approval. A shared opt-out list records STOP replies and excludes those recipients from future campaigns.\n\nI built an admin dashboard with pie charts for sent, delivered, read and failed messages, plus cost reports and print or PDF export. I used xUnit, Playwright and SQL Server LocalDB for automated testing.',
+    outcome: 'Teams can manage campaigns from the web portal or its Android and iPhone apps, resume drafts without reselecting recipients, and review delivery and costs from the same platform.',
+    highlights: ['Project-specific senders', 'Resumable campaign drafts', 'Delivery and cost reporting'],
+    contributions: ['Three-step campaign wizard with saved progress and recipient selection', 'Mobile contacts, manual entry, CSV imports and saved groups', 'Project-specific senders and administrator-controlled access to approved templates', 'Twilio approval for templates with images, videos, PDFs and buttons', 'Shared STOP opt-out list applied to future campaigns', 'Delivery analytics, pie charts, cost reports and print or PDF export', 'Android and iPhone apps connected to the shared portal'],
+  },
+  {
     slug: 'al-emadi-meeting-room-booking', title: 'Al Emadi Meeting Room Booking Portal', category: 'Internal Business Application', type: 'Web & CMS', visual: 'cms', accent: '#94b8ff', label: 'One center. One room calendar.',
     summary: 'A deployed internal booking portal replacing manual meeting room coordination with client reservations, email verification and practical administration across business centers.',
     tech: ['React', 'ASP.NET Core', 'SQL Server', 'REST APIs', 'Email OTP', 'CSV reporting', 'IIS', 'HTTPS'],
