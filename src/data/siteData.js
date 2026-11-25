@@ -17,6 +17,17 @@ export const learning = ['TypeScript', 'xUnit', 'Playwright', 'CI/CD']
 
 export const projects = [
   {
+    slug: 'influencer-registration-portal', title: 'Influencer Registration Portal', category: 'Event registration', type: 'Web & CMS', visual: 'registration', accent: '#a2adff', label: 'Register. Review. Issue media IDs.',
+    summary: 'A web portal for influencer registration at Teeb Al Hazm events, with phone verification, application review and personalized media ID cards.',
+    tech: ['ASP.NET Core 10', 'C#', 'React', 'TypeScript', 'SQL Server', 'Entity Framework Core', 'SkiaSharp', 'HarfBuzz', 'SMS Country', 'Twilio', 'IIS'],
+    role: 'I developed the public registration experience and the admin portal, including event management, application review, SMS and email notifications, Excel export, audit logs and ID-card generation.',
+    challenge: 'The team needed one repeatable registration process for multiple events. Influencers needed to submit their details and photo, while staff needed to verify applications, review social profiles, approve or reject requests and prepare consistent ID cards.',
+    solution: 'I built a mobile-friendly registration form with photo upload or camera capture and a 60-second phone OTP. Qatar numbers use SMS Country and other international numbers use Twilio. Registrations belong to an event, so the same influencer can apply for a later event.\n\nThe admin portal separates pending, approved, rejected, ready-to-download and downloaded applications. Administrators can manage event dates, registration availability, SMS templates, notification recipients, terms and portal users. Approved records support Excel export, QR codes and personalized JPG ID cards made from a configurable template.',
+    outcome: 'The team can run registrations across events, review applications in one place and generate consistent media ID cards. Previously generated cards are cached for faster repeat downloads.',
+    highlights: ['Event-based registration', 'Phone OTP verification', 'Admin review and ID cards'],
+    contributions: ['Mobile-friendly registration with photo upload and camera capture', 'Event management, dates and registration availability', 'Phone OTP routing through SMS Country and Twilio', 'Application review, social profile checks and approval or rejection', 'SMS and email notifications with configurable templates and recipients', 'Excel export of approved records', 'Audit logs and portal user management', 'QR codes and personalized JPG ID-card generation with cached repeat downloads'],
+  },
+  {
     slug: 'whatsapp-campaign-portal', title: 'WhatsApp Campaign Portal', category: 'Campaign Management', type: 'Web & CMS', visual: 'cms', accent: '#a2adff', label: 'Campaigns across web and mobile',
     summary: 'A web and mobile platform for creating, scheduling and tracking WhatsApp campaigns across projects, each with its own sender.',
     tech: ['ASP.NET Core', 'Razor', 'JavaScript', 'SQL Server', 'Twilio WhatsApp API', 'Android', 'Swift / UIKit', 'IIS', 'xUnit', 'Playwright', 'SQL Server LocalDB'],

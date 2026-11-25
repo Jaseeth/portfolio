@@ -1,6 +1,6 @@
 # Jaseeth Mohamed — Portfolio
 
-React / Vite portfolio with nine project case studies, employment history, education, recognition and direct contact options.
+React / Vite portfolio with eleven project case studies, employment history, education, recognition and direct contact options.
 
 ## Run locally
 
